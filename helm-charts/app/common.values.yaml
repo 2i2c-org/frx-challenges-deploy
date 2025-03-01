@@ -23,11 +23,11 @@ frx-challenges:
       # Guarantee 32G of RAM and 6 CPUs
       # this is where all our actual evaluations run
       requests:
-        memory: 100Gi
-        cpu: 10
+        memory: 480Gi
+        cpu: 30
       limits:
-        memory: 100Gi
-        cpu: 10
+        memory: 480Gi
+        cpu: 30
 
   adminUsers:
     - GeorgianaElena
@@ -60,7 +60,7 @@ frx-challenges:
       # Make sure OAuth2 redirect URI is https, not http
       ACCOUNT_DEFAULT_HTTP_PROTOCOL: https
       # Image is built from https://github.com/janelia-cellmap/cellmap-segmentation-challenge
-      EVALUATOR_DOCKER_IMAGE: quay.io/2i2c/cellmap-segmentation-challenge-evaluator:aea588ca952f
+      EVALUATOR_DOCKER_IMAGE: quay.io/2i2c/cellmap-segmentation-challenge-evaluator:126d65e3f91b
       EVALUATOR_DOCKER_CMD:
         - "csc"
         - "evaluate"
@@ -72,17 +72,18 @@ frx-challenges:
         - "{result_path}"
       EVALUATOR_DOCKER_EXTRA_BINDS:
         - /opt/state/truth/ground_truth.zarr:/opt/ground_truth.zarr:ro
-      EVALUATOR_DOCKER_CONTAINER_CPU_LIMIT: 10
+      EVALUATOR_DOCKER_CONTAINER_CPU_LIMIT: 30
       # Set this to 100G now to see how much it actually gets to
-      EVALUATOR_DOCKER_CONTAINER_MEMORY_LIMIT: 107374182400
+      EVALUATOR_DOCKER_CONTAINER_MEMORY_LIMIT: 515396075520 # 483183820800  # 246960619520 # 161061273600 # 107374182400 # 644245094400 # 483183820800 # 322122547200 # 107374182400
       EVALUATOR_DOCKER_CONTAINER_ENV:
-        # 4 knobs we have to tune the evaluator resource usage
-        # and performance
-        MAX_MAIN_THREADS: "4"
-        MAX_LABEL_THREADS: "4"
-        MAX_INSTANCE_THREADS: "2"
-        # disable precompute limit
-        PRECOMPUTE_LIMIT: 0
+        # # 4 knobs we have to tune the evaluator resource usage
+        # # and performance
+        MAX_INSTANCE_THREADS: 2
+        MAX_SEMANTIC_THREADS: 11
+        PER_INSTANCE_THREADS: 4
+        # submitted_# of instances / ground_truth_# of instances
+        INSTANCE_RATIO_CUTOFF: 100
+        PRECOMPUTE_LIMIT: 1e8
       EVALUATION_DISPLAY_CONFIG:
         - result_key: overall_semantic_score
           display_name: Semantic Score
