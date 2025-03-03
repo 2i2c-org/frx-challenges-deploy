@@ -1,4 +1,8 @@
 frx-challenges:
+  evaluator:
+    resources: null
+  dind:
+    resources: null
   ingress:
     hosts:
       - staging.cellmapchallenge.2i2c.cloud
