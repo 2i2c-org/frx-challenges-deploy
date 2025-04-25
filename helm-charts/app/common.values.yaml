@@ -60,7 +60,7 @@ frx-challenges:
       # Make sure OAuth2 redirect URI is https, not http
       ACCOUNT_DEFAULT_HTTP_PROTOCOL: https
       # Image is built from https://github.com/janelia-cellmap/cellmap-segmentation-challenge
-      EVALUATOR_DOCKER_IMAGE: quay.io/2i2c/cellmap-segmentation-challenge-evaluator:126d65e3f91b
+      EVALUATOR_DOCKER_IMAGE: quay.io/2i2c/cellmap-segmentation-challenge-evaluator:b32799f2781b
       EVALUATOR_DOCKER_CMD:
         - "csc"
         - "evaluate"
