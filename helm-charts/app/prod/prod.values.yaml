@@ -35,7 +35,7 @@ frx-challenges:
         - https://cellmapchallenge.2i2c.cloud
         - https://cellmapchallenge.janelia.org
       # Disable debug mode for prod instance
-      DEBUG: False
+      DEBUG: True
       SOCIALACCOUNT_PROVIDERS:
         github:
           APP:
