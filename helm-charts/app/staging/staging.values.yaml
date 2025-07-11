@@ -28,7 +28,7 @@ frx-challenges:
         - staging.cellmapchallenge.2i2c.cloud
       CSRF_TRUSTED_ORIGINS:
         - https://staging.cellmapchallenge.2i2c.cloud
-      DEBUG: False
+      DEBUG: True
       EVALUATOR_DOCKER_IMAGE: quay.io/2i2c/cellmap-segmentation-challenge-evaluator:f9f0d14700b4
       EVALUATOR_DOCKER_CONTAINER_CPU_LIMIT: 6
       EVALUATOR_DOCKER_CONTAINER_MEMORY_LIMIT: 34359738368 # 32Gi
