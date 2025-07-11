@@ -33,6 +33,7 @@ frx-challenges:
     - GeorgianaElena
     - yuvipanda
     - rhoadesScholar
+    - jnywong
 
   extraInitContainers:
     gcs-pull:
