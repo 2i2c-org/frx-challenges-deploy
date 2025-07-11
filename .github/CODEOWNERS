@@ -6,4 +6,4 @@
 
 # Any files in the helm-charts/app/staging directory and any of its
 # subdirectories.
-helm-charts/app/staging @2i2c-org/janelia-cellmap @2i2c-org/2i2c-team
+helm-charts/app/staging @2i2c-org/janelia-cellmap
