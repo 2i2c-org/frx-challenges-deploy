@@ -1,0 +1,9 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @2i2c-org/2i2c-team will be requested for
+# review when someone opens a pull request.
+*       @2i2c-org/2i2c-team
+
+# Any files in the helm-charts/app/staging directory and any of its
+# subdirectories.
+helm-charts/app/staging @2i2c-org/janelia-cellmap @2i2c-org/2i2c-team
