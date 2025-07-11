@@ -2,8 +2,8 @@
 # the repo. Unless a later match takes precedence,
 # @2i2c-org/2i2c-team will be requested for
 # review when someone opens a pull request.
-*       @2i2c-org/2i2c-team
+*       @2i2c-org/product-and-services
 
 # Any files in the helm-charts/app/staging directory and any of its
 # subdirectories.
-helm-charts/app/staging @2i2c-org/janelia-cellmap @2i2c-org/2i2c-team
+helm-charts/app/staging @2i2c-org/janelia-cellmap @2i2c-org/product-and-services
