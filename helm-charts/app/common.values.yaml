@@ -35,6 +35,9 @@ frx-challenges:
     - rhoadesScholar
     - jnywong
 
+  databaseReaders:
+    - someone@janelia.hhmi.org
+
   extraInitContainers:
     gcs-pull:
       name: gcs-pull
