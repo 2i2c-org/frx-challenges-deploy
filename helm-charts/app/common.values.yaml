@@ -36,7 +36,7 @@ frx-challenges:
     - jnywong
 
   databaseReaders:
-    - someone@janelia.hhmi.org
+    - clementsj@janelia.hhmi.org
 
   extraInitContainers:
     gcs-pull:
