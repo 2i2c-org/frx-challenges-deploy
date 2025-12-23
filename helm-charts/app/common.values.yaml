@@ -64,7 +64,7 @@ frx-challenges:
       # Make sure OAuth2 redirect URI is https, not http
       ACCOUNT_DEFAULT_HTTP_PROTOCOL: https
       # Image is built from https://github.com/janelia-cellmap/cellmap-segmentation-challenge
-      EVALUATOR_DOCKER_IMAGE: quay.io/2i2c/cellmap-segmentation-challenge-evaluator:130cebd36f04
+      EVALUATOR_DOCKER_IMAGE: quay.io/2i2c/cellmap-segmentation-challenge-evaluator:b3626f31e3d0
       EVALUATOR_DOCKER_CMD:
         - "csc"
         - "evaluate"
@@ -85,11 +85,11 @@ frx-challenges:
       EVALUATOR_DOCKER_CONTAINER_ENV:
         # Reduced from defaults to lower memory usage
         # May increase evaluation time but prevents OOM
-        MAX_INSTANCE_THREADS: 5
+        MAX_INSTANCE_THREADS: 3
         MAX_SEMANTIC_THREADS: 50
-        PER_INSTANCE_THREADS: 100
+        PER_INSTANCE_THREADS: 50
         # submitted_# of instances / ground_truth_# of instances
-        INSTANCE_RATIO_CUTOFF: 20
+        INSTANCE_RATIO_CUTOFF: 10
         PRECOMPUTE_LIMIT: 1e7
       EVALUATION_DISPLAY_CONFIG:
         - result_key: overall_semantic_score
