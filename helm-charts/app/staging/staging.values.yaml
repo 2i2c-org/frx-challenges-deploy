@@ -1,7 +1,7 @@
 frx-challenges:
   image:
     repository: quay.io/2i2c/janelia-frx-challenges
-    tag: 0.0.1-0.dev.git.582.ha663eb4
+    tag: 0.0.1-0.dev.git.583.h6f6842a
     pullPolicy: IfNotPresent
   evaluator:
     resources:
