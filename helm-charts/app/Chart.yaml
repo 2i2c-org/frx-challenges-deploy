@@ -7,7 +7,7 @@ appVersion: "1.0"
 
 dependencies:
   - name: frx-challenges
-    version: 0.0.1-0.dev.git.577.ha3ed33b
+    version: 0.0.1-0.dev.git.577.h1a0f3f1
     repository: https://janelia-cellmap.github.io/frx-challenges/ # ingress-nginx for a k8s Ingress resource controller that routes traffic from
   # a single IP entrypoint to various services exposed via k8s Ingress resources
   # that references this controller.
