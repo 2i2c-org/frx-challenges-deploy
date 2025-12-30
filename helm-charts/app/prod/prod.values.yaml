@@ -15,7 +15,10 @@ frx-challenges:
         memory: 1Gi
         cpu: 2
   pvc:
-    storage: 50Gi
+    storage: 100Gi
+  dind:
+    pvc:
+      storage: 200Gi
   ingress:
     hosts:
       - cellmapchallenge.2i2c.cloud
