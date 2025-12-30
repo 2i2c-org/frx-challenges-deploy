@@ -3,6 +3,8 @@ frx-challenges:
     repository: quay.io/2i2c/janelia-frx-challenges
     tag: 0.0.1-0.dev.git.583.h6f6842a
     pullPolicy: IfNotPresent
+  pvc:
+    storage: 15Gi  # Increased from 10Gi to test PVC expansion
   evaluator:
     resources:
       requests:
@@ -12,6 +14,8 @@ frx-challenges:
         memory: 4Gi
         cpu: 1
   dind:
+    pvc:
+      storage: 110Gi  # Increased from default 100Gi to test expansion
     resources:
       requests:
         memory: 32Gi
