@@ -1,7 +1,7 @@
 frx-challenges:
   image:
     repository: quay.io/2i2c/janelia-frx-challenges
-    tag: 0.0.1-0.dev.git.583.h6f6842a
+    tag: 0.0.1-0.dev.git.584.he40508b
     pullPolicy: IfNotPresent
   pvc:
     storage: 15Gi # Increased from 10Gi to test PVC expansion
