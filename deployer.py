@@ -62,12 +62,10 @@ def get_decrypted_file(original_filepath):
     Copied from 2i2c/infrastructure
     """
     if not os.path.isfile(original_filepath):
-        raise FileNotFoundError(
-            f"""
+        raise FileNotFoundError(f"""
             File Not Found at following location! Have you checked it's the
             correct path? {original_filepath}
-        """
-        )
+        """)
     filename = os.path.basename(original_filepath)
     _, ext = os.path.splitext(filename)
 
@@ -85,13 +83,11 @@ def get_decrypted_file(original_filepath):
                 )
 
         if "sops" not in content:
-            raise KeyError(
-                """
+            raise KeyError("""
                 Expecting to find the `sops` key in this encrypted file - but
                 it wasn't found! Please regenerate the secret in case it has
                 been checked into version control and leaked!
-                """
-            )
+                """)
 
         # If file has a `sops` key, we assume it's sops encrypted
         with tempfile.NamedTemporaryFile() as f:
